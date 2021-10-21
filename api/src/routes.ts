@@ -3,7 +3,7 @@ import { AuthenticateUserController } from "./controllers/AuthenticateUserContro
 import { CreateMessageController } from "./controllers/CreateMessageController";
 import { GetLast3MessagesController } from "./controllers/GetLast3MessagesController";
 import { ProfileUserController } from "./controllers/ProfileUserController";
-import { ensureAutheticated } from "./middleware/ensureAuthenticated";
+import { ensureAuthenticated } from "./middleware/ensureAuthenticated";
 
 const router = Router();
 
@@ -14,7 +14,7 @@ router.post(
 
 router.post(
     "/messages", 
-    ensureAutheticated, 
+    ensureAuthenticated, 
     new CreateMessageController().handle
 );
 
@@ -25,7 +25,7 @@ router.get(
 
 router.get(
     "/profile", 
-    ensureAutheticated, 
+    ensureAuthenticated, 
     new ProfileUserController().handle
 );
 

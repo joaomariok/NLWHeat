@@ -6,7 +6,7 @@ import { sign } from "jsonwebtoken";
  * Receber code(string)
  * Recuperar o access_token no github
  * Recuperar infos do user no github
- * Veriicar se o usuario existe no DB
+ * Verificar se o usuario existe no DB
  * ---- SIM = gera um token
  * ---- NAO = Cria no DB, gera um token
  * Retornar o token com as infos do user
