@@ -7,7 +7,10 @@ import { ensureAutheticated } from "./middleware/ensureAuthenticated";
 
 const router = Router();
 
-router.post("/authenticate", new AuthenticateUserController().handle);
+router.post(
+    "/authenticate", 
+    new AuthenticateUserController().handle
+);
 
 router.post(
     "/messages", 
@@ -15,7 +18,10 @@ router.post(
     new CreateMessageController().handle
 );
 
-router.get("/messages/last3", new GetLast3MessagesController().handle);
+router.get(
+    "/messages/last3", 
+    new GetLast3MessagesController().handle
+);
 
 router.get(
     "/profile", 
